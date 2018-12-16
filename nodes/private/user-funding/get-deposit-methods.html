@@ -1,0 +1,26 @@
+<script type="text/javascript">
+RED.nodes.registerType('get-deposit-methods',{
+  category: 'krakenAPI',
+  color: '#95bf77',
+  defaults: {
+    name: {value:""}
+  },
+  inputs:1,
+  outputs:1,
+  icon: "node_kraken.png",
+  label: function() {
+    return this.name||"get-deposit-methods";
+  }
+});
+</script>
+
+<script type="text/x-red" data-template-name="get-deposit-methods">
+<div class="form-row">
+<label for="node-input-name"><i class="icon-tag"></i> Name</label>
+<input type="text" id="node-input-name" placeholder="Name">
+</div>
+</script>
+
+<script type="text/x-red" data-help-name="get-deposit-methods">
+<p>Node-RED package to support the Kraken API.</p>
+</script>

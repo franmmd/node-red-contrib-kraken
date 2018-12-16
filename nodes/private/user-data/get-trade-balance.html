@@ -1,0 +1,40 @@
+<script type="text/javascript">
+RED.nodes.registerType('get-trade-balance',{
+  category: 'krakenAPI',
+  color: '#755f77',
+  defaults: {
+    kraken: {type: "kraken-credentials", validate: validateKrakenNode},
+    name: {value:""}
+  },
+  inputs:1,
+  outputs:2,
+  outputLabels: ["result","error"],
+  icon: "node_kraken.png",
+  label: function() {
+    return this.name||"Account balance";
+  }
+});
+</script>
+
+<script type="text/x-red" data-template-name="get-trade-balance">
+	<div class="form-row">
+		<label for="node-input-kraken"><i class="icon-lock"></i>Credential</label>
+		<input type="text" id="node-input-kraken">
+	</div>
+	<div class="form-row">
+		<label for="node-input-name"><i class="icon-tag"></i> Name</label>
+		<input type="text" id="node-input-name" placeholder="Name">
+	</div>
+</script>
+
+<script type="text/x-red" data-help-name="get-trade-balance">
+<p>Node-RED package to support the Kraken API.</p>
+<h3>Input</h3>
+  <dl class="message-properties">
+    <dt>
+      API credentials
+      <span class="property-type">kraken-credentials</span>
+    </dt>
+    <dd>API key and API secret for the Kraken account.</dt>
+  </dl>
+</script>

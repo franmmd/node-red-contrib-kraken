@@ -1,0 +1,27 @@
+<script type="text/javascript">
+RED.nodes.registerType('get-trades-history',{
+  category: 'krakenAPI',
+  color: '#75bf77',
+  defaults: {
+    name: {value:""}
+  },
+  inputs:1,
+  outputs:2,
+  outputLabels: ["result","error"],
+  icon: "node_kraken.png",
+  label: function() {
+    return this.name||"Trades history";
+  }
+});
+</script>
+
+<script type="text/x-red" data-template-name="get-trades-history">
+<div class="form-row">
+<label for="node-input-name"><i class="icon-tag"></i> Name</label>
+<input type="text" id="node-input-name" placeholder="Name">
+</div>
+</script>
+
+<script type="text/x-red" data-help-name="get-trades-history">
+<p>Node-RED package to support the Kraken API.</p>
+</script>

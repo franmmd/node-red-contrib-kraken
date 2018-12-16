@@ -1,0 +1,59 @@
+{
+         "name": "node-red-contrib-kraken",
+         "version": "0.1.0",
+         "description": "Kraken exchange integration for node-red",
+         "node-red": {
+                  "nodes": {
+                           "get-server-time": "nodes/public/market-data/get-server-time.js",
+                           "get-asset-info": "nodes/public/market-data/get-asset-info.js",
+                           "get-tradable-asset-pairs": "nodes/public/market-data/get-tradable-asset-pairs.js",
+                           "get-ticker-information": "nodes/public/market-data/get-ticker-information.js",
+                           "get-ohlc-data": "nodes/public/market-data/get-ohlc-data.js",
+                           "get-order-book": "nodes/public/market-data/get-order-book.js",
+                           "get-recent-trades": "nodes/public/market-data/get-recent-trades.js",
+                           "get-recent-spread-data": "nodes/public/market-data/get-recent-spread-data.js",
+						   "kraken-credentials": "nodes/private/credentials/credentials.js",
+                           "get-account-balance": "nodes/private/user-data/get-account-balance.js",
+                           "get-trade-balance": "nodes/private/user-data/get-trade-balance.js",
+                           "get-open-orders": "nodes/private/user-data/get-open-orders.js",
+                           "get-closed-orders": "nodes/private/user-data/get-closed-orders.js",
+                           "query-orders-info": "nodes/private/user-data/query-orders-info.js",
+                           "get-trades-history": "nodes/private/user-data/get-trades-history.js",
+                           "query-trades-info": "nodes/private/user-data/query-trades-info.js",
+                           "get-open-positions": "nodes/private/user-data/get-open-positions.js",
+                           "get-ledgers-info": "nodes/private/user-data/get-ledgers-info.js",
+                           "query-ledgers": "nodes/private/user-data/query-ledgers.js",
+                           "get-trade-volume": "nodes/private/user-data/get-trade-volume.js",
+                           "add-standard-order": "nodes/private/user-trading/add-standard-order.js",
+                           "cancel-open-order": "nodes/private/user-trading/cancel-open-order.js",
+                           "get-deposit-methods": "nodes/private/user-funding/get-deposit-methods.js",
+                           "get-deposit-addresses": "nodes/private/user-funding/get-deposit-addresses.js",
+                           "get-status-of-recent-deposits": "nodes/private/user-funding/get-status-of-recent-deposits.js",
+                           "get-withdrawal-information": "nodes/private/user-funding/get-withdrawal-information.js",
+                           "withdraw-funds": "nodes/private/user-funding/withdraw-funds.js",
+                           "get-status-of-recent-withdrawals": "nodes/private/user-funding/get-status-of-recent-withdrawals.js",
+                           "get-withdrawal-cancelation": "nodes/private/user-funding/get-withdrawal-cancelation.js"
+                  }
+         },
+         "author": "Francisco Manuel Martín Delfa",
+         "homepage": "https://github.com/franmmd/node-red-contrib-kraken",
+         "bugs": {
+                  "url": "https://github.com/franmmd/node-red-contrib-kraken/issues"
+         },
+         "repository": {
+                  "type": "git",
+                  "url": "https://github.com/franmmd/node-red-contrib-kraken"
+         },
+         "license": "MIT",
+         "keywords": [
+                  "node-red",
+                  "kraken",
+                  "cryptocurrency",
+                  "bitcoin",
+                  "ethereum",
+                  "exchange"
+         ],
+         "dependencies": {
+                  "kraken-api": "git+https://github.com/nothingisdead/npm-kraken-api.git"
+         }
+}

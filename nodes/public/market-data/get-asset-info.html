@@ -1,0 +1,27 @@
+<script type="text/javascript">
+RED.nodes.registerType('get-asset-info',{
+  category: 'krakenAPI',
+  color: '#657f77',
+  defaults: {
+    name: {value:""}
+  },
+  inputs:1,
+  outputs:2,
+  outputLabels: ["result","error"],
+  icon: "node_kraken.png",
+  label: function() {
+    return this.name||"Assets";
+  }
+});
+</script>
+
+<script type="text/x-red" data-template-name="get-asset-info">
+<div class="form-row">
+<label for="node-input-name"><i class="icon-tag"></i> Name</label>
+<input type="text" id="node-input-name" placeholder="Name">
+</div>
+</script>
+
+<script type="text/x-red" data-help-name="get-asset-info">
+<p>Node-RED package to support the Kraken API.</p>
+</script>
