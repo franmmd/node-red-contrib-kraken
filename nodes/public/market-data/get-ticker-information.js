@@ -12,7 +12,7 @@ module.exports = function(RED) {
 		node.on('input', function(msg) {
 			this.status({ fill: 'blue', shape: 'dot', text: 'requesting' })
 		  
-			kraken.api('Ticker')
+			kraken.api('Ticker', msg.payload)
 			.then(result => {
 				console.log(result);
 				  msg.payload = result.result
