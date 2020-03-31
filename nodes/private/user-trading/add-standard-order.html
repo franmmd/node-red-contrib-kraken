@@ -3,10 +3,12 @@ RED.nodes.registerType('add-standard-order',{
   category: 'krakenAPI',
   color: '#85bf77',
   defaults: {
+    kraken: {type: "kraken-credentials", validate: validateKrakenNode},
     name: {value:""}
   },
   inputs:1,
-  outputs:1,
+  outputs:2,
+  outputLabels: ["result","error"],
   icon: "node_kraken.png",
   label: function() {
     return this.name||"add-standard-order";
@@ -15,12 +17,18 @@ RED.nodes.registerType('add-standard-order',{
 </script>
 
 <script type="text/x-red" data-template-name="add-standard-order">
-<div class="form-row">
-<label for="node-input-name"><i class="icon-tag"></i> Name</label>
-<input type="text" id="node-input-name" placeholder="Name">
-</div>
+	<div class="form-row">
+		<label for="node-input-kraken"><i class="icon-lock"></i>Credential</label>
+		<input type="text" id="node-input-kraken">
+	</div>
+	<div class="form-row">
+		<label for="node-input-name"><i class="icon-tag"></i> Name</label>
+		<input type="text" id="node-input-name" placeholder="Name">
+	</div>
 </script>
 
 <script type="text/x-red" data-help-name="add-standard-order">
 <p>Node-RED package to support the Kraken API.</p>
+<p>Pass the order parameters into the payload.</p>
+<p>See the <a href='https://www.kraken.com/features/api#add-standard-order'>API documentation</a> for details</p>
 </script>
